@@ -3,7 +3,7 @@ import { faker } from '@faker-js/faker'
 import TestData from '#models/test_data'
 import { test } from '@japa/runner'
 
-const batchSizes = 10000
+const batchSizes = 1000
 
 test.group('browser', (group) => {
   // --> HOOKS <--
@@ -11,6 +11,22 @@ test.group('browser', (group) => {
   // _group.tap(test => test.pin())
 
   group.each.setup(() => testUtils.db().withGlobalTransaction())
+
+  test('test', ({ assert }) => {
+    assert.isTrue(true)
+  })
+
+  test('test', ({ assert }) => {
+    assert.isTrue(true)
+  })
+
+  test('test', ({ assert }) => {
+    assert.isTrue(true)
+  })
+
+  test('test', ({ assert }) => {
+    assert.isTrue(true)
+  })
 
   // --> GET TEAM FROM BASIC TOKEN <--
 
